@@ -11,10 +11,9 @@ const Index = () => {
   // Event schedule details
   const eventDate = "Thursday, May 9, 2024 • Gruha Pravesam at 10:23 PM";
   const fullAddress = "D No 494-B1-A, Near Gangamma Thalli Temple, Narasaraopet, Palnadu, AP";
-  const googleMapUrl =
-    "https://www.google.com/maps?q=D+No+494-B1-A+Near+Gangamma+Thalli+Temple,+Narasaraopet,+Palnadu,+AP";
+  const googleMapUrl = "https://www.google.com/maps/dir/?api=1&destination=722R%2BQRF%2C+Guntur%2C+Andhra+Pradesh+522601";
   // Countdown target: 2024-05-09 22:23:00 local time
-  const targetDate = "2024-05-09T22:23:00";
+  const targetDate = new Date("2024-05-09T22:23:00+05:30").toISOString();
 
   const eventSchedule = [
     {
@@ -49,7 +48,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-cream/30 to-transparent rounded-t-xl" />
         </div>
         <InvitationHeader
-          title="Gruha Pravesam Invitation"
+          title="House Ceremony Invitation"
           subtitle="With great joy and divine blessings, we invite you to grace the auspicious occasion of our housewarming ceremony."
           date={eventDate}
         />

@@ -14,7 +14,7 @@ interface TimeLeft {
 
 export function Countdown({ targetDate }: CountdownProps) {
   const calculateTimeLeft = (): TimeLeft => {
-    const difference = +new Date(targetDate) - +new Date();
+    const difference = new Date(targetDate).getTime() - new Date().getTime();
     let timeLeft: TimeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
 
     if (difference > 0) {
