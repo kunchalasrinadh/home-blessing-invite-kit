@@ -110,7 +110,7 @@
   }
 
   .button-gold {
-    @apply bg-gold hover:bg-gold-dark text-white font-medium py-2 px-6 rounded-md transition-colors duration-300;
+    @apply bg-gold hover:bg-gold-dark text-white font-medium py-2 px-6 rounded-md transition-colors duration-300 shadow-md;
   }
 
   .border-animated {
@@ -125,6 +125,22 @@
     animation: border-dance 4s ease infinite;
     z-index: -1;
     padding: 2px;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Traditional decorative pattern for borders */
+  .border-pattern {
+    background-image: repeating-linear-gradient(45deg, #d4af37 0, #d4af37 1px, transparent 0, transparent 50%);
+    background-size: 10px 10px;
+  }
+  
+  /* Kolam-inspired dotted pattern */
+  .kolam-pattern {
+    background-image: radial-gradient(#d4af37 1px, transparent 1px);
+    background-size: 10px 10px;
   }
 }
 
@@ -152,5 +168,39 @@
   
   .divider-icon {
     @apply mx-4 text-gold;
+  }
+  
+  /* Traditional decorative elements */
+  .mangalsutra-pattern {
+    @apply relative;
+  }
+  
+  .mangalsutra-pattern::before {
+    content: "";
+    @apply absolute w-2 h-2 rounded-full bg-gold;
+    left: calc(50% - 1px);
+    animation: pulse 2s infinite;
+  }
+  
+  .mangalsutra-pattern::after {
+    content: "";
+    @apply absolute w-4 h-4 rounded-full border border-gold;
+    left: calc(50% - 2px);
+    top: -1px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.8;
   }
 }

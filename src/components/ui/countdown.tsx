@@ -14,7 +14,11 @@ interface TimeLeft {
 
 export function Countdown({ targetDate }: CountdownProps) {
   const calculateTimeLeft = (): TimeLeft => {
-    const difference = new Date(targetDate).getTime() - new Date().getTime();
+    // Make sure we're properly parsing the date with timezone consideration
+    const target = new Date(targetDate);
+    const now = new Date();
+    
+    const difference = target.getTime() - now.getTime();
     let timeLeft: TimeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
 
     if (difference > 0) {
@@ -32,14 +36,17 @@ export function Countdown({ targetDate }: CountdownProps) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    // Create interval that runs every second
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
-    return () => clearTimeout(timer);
-  });
+    
+    // Cleanup interval on component unmount
+    return () => clearInterval(timer);
+  }, [targetDate]);
 
   return (
-    <div className="bg-gradient-to-b from-cream to-white py-16 px-6 md:px-12 text-center">
+    <div className="bg-gradient-to-b from-gold/5 to-white py-16 px-6 md:px-12 text-center">
       <div className="max-w-4xl mx-auto">
         <h2 className="font-playfair text-4xl font-bold mb-4 gold-gradient">
           Counting Down
@@ -57,7 +64,7 @@ export function Countdown({ targetDate }: CountdownProps) {
           ].map((item, index) => (
             <div 
               key={item.label} 
-              className="card-elegant animate-fade-in"
+              className="card-elegant animate-fade-in bg-gradient-to-b from-cream to-white border-gold/40 shadow-lg transform hover:scale-105 transition-all duration-300"
               style={{ animationDelay: `${0.1 * index}s` }}
             >
               <div className="text-4xl md:text-5xl font-dancing text-gold mb-2">
