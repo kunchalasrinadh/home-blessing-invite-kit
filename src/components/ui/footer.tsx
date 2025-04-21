@@ -1,6 +1,6 @@
 
 import React from "react";
-import { PartyPopper, Whatsapp, Mail, Phone } from "lucide-react";
+import { PartyPopper, MessageSquare, Mail, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -28,7 +28,7 @@ export function Footer() {
             style={{ minWidth: 220, justifyContent: "center" }}
             aria-label="WhatsApp Srinadh"
           >
-            <Whatsapp className="w-6 h-6" />
+            <MessageSquare className="w-6 h-6" />
             Message on WhatsApp
           </a>
           <div className="flex gap-4 justify-center items-center">
