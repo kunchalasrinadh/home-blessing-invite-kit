@@ -14,7 +14,7 @@ interface TimeLeft {
 
 export function Countdown({ targetDate }: CountdownProps) {
   const calculateTimeLeft = (): TimeLeft => {
-    // Make sure we're properly parsing the date with timezone consideration
+    // Parse the target date with timezone consideration
     const target = new Date(targetDate);
     const now = new Date();
     
@@ -36,9 +36,18 @@ export function Countdown({ targetDate }: CountdownProps) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   useEffect(() => {
+    // Force an immediate calculation on mount to prevent initial zeros
+    setTimeLeft(calculateTimeLeft());
+    
     // Create interval that runs every second
     const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
+      const updatedTimeLeft = calculateTimeLeft();
+      setTimeLeft(updatedTimeLeft);
+      
+      // Debug
+      console.log("Target date:", new Date(targetDate).toLocaleString());
+      console.log("Current time:", new Date().toLocaleString());
+      console.log("Time difference:", updatedTimeLeft);
     }, 1000);
     
     // Cleanup interval on component unmount

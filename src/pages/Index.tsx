@@ -12,8 +12,10 @@ const Index = () => {
   const eventDate = "Thursday, May 9, 2024 • Gruha Pravesam at 10:23 PM";
   const fullAddress = "D No 494-B1-A, Near Gangamma Thalli Temple, Narasaraopet, Palnadu, AP";
   const googleMapUrl = "https://www.google.com/maps/dir/?api=1&destination=722R%2BQRF%2C+Guntur%2C+Andhra+Pradesh+522601";
-  // Countdown target: 2024-05-09 22:23:00 local time
-  const targetDate = new Date("2024-05-09T22:23:00+05:30").toISOString();
+  
+  // Set target date string in ISO format with correct timezone (GMT+5:30 for India)
+  // May 9th, 2024 at 10:23 PM IST
+  const targetDate = "2024-05-09T22:23:00+05:30";
 
   const eventSchedule = [
     {
@@ -53,15 +55,29 @@ const Index = () => {
           </div>
         </div>
         
-        {/* Home front image as header background */}
+        {/* Lord Ganesha image at the center of the start page */}
+        <div className="relative flex justify-center items-center py-6 bg-gradient-to-r from-gold/10 via-cream to-gold/10 overflow-hidden">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'44\' height=\'44\' viewBox=\'0 0 44 44\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23d4af37\' fill-opacity=\'0.1\'%3E%3Cpath fill-rule=\'evenodd\' d=\'M22 0c12.15 0 22 9.85 22 22s-9.85 22-22 22S0 34.15 0 22 9.85 0 22 0zm0 4C13.16 4 6 11.16 6 20s7.16 16 16 16 16-7.16 16-16S30.84 4 22 4z\'/%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+          <div className="w-32 h-32 md:w-40 md:h-40 relative z-10 animate-fade-in">
+            <img 
+              src="/lovable-uploads/3e733e9d-7b16-4bd6-bca5-9cc50843fe03.png" 
+              alt="Lord Ganesha" 
+              className="w-full h-full object-contain filter drop-shadow-lg transition-transform hover:scale-105 duration-700 rounded-full border-2 border-gold/30"
+            />
+            <div className="absolute -inset-1 rounded-full bg-gold/20 -z-10 animate-pulse-gold"></div>
+          </div>
+          <div className="absolute left-0 bottom-0 w-full h-4 bg-gradient-to-r from-gold/20 via-gold/5 to-gold/20"></div>
+        </div>
+        
+        {/* Home front image as header background with animation */}
         <div className="relative">
           <img
             src="/lovable-uploads/3e733e9d-7b16-4bd6-bca5-9cc50843fe03.png"
             alt="Home Front"
-            className="w-full h-64 md:h-80 object-cover shadow-lg border-b-4 border-gold"
-            style={{ objectPosition: "center" }}
+            className="w-full h-64 md:h-80 object-cover shadow-lg border-b-4 border-gold animate-fade-in transform hover:scale-[1.02] transition-all duration-1000"
+            style={{ objectPosition: "center", animationDelay: "0.3s" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-cream/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-cream/30 to-transparent animate-fade-in" style={{ animationDelay: "0.5s" }}></div>
         </div>
         
         <InvitationHeader
