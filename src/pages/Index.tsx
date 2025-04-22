@@ -1,4 +1,3 @@
-
 import React from "react";
 import { InvitationHeader } from "@/components/ui/invitation-header";
 import { EventDetails } from "@/components/ui/event-details";
@@ -69,17 +68,31 @@ const Index = () => {
           <div className="absolute left-0 bottom-0 w-full h-4 bg-gradient-to-r from-gold/20 via-gold/5 to-gold/20"></div>
         </div>
         
-        {/* Home front image as header background with animation */}
-        <div className="relative">
-          <img
-            src="/lovable-uploads/3e733e9d-7b16-4bd6-bca5-9cc50843fe03.png"
-            alt="Home Front"
-            className="w-full h-64 md:h-80 object-cover shadow-lg border-b-4 border-gold animate-fade-in transform hover:scale-[1.02] transition-all duration-1000"
-            style={{ objectPosition: "center", animationDelay: "0.3s" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-cream/30 to-transparent animate-fade-in" style={{ animationDelay: "0.5s" }}></div>
+        {/* Home front image with enhanced animations */}
+        <div className="relative overflow-hidden">
+          <div className="group relative">
+            <img
+              src="/lovable-uploads/3e733e9d-7b16-4bd6-bca5-9cc50843fe03.png"
+              alt="Home Front"
+              className="w-full h-64 md:h-80 object-cover shadow-lg border-4 border-gold/30 animate-fade-in transform hover:scale-[1.02] transition-all duration-1000 group-hover:-translate-y-1 group-hover:rotate-1 group-hover:scale-[1.03]"
+              style={{ 
+                objectPosition: "center",
+                animationDelay: "0.3s",
+                boxShadow: "0 0 20px rgba(212, 175, 55, 0.3)",
+              }}
+            />
+            {/* Gradient overlay with animation */}
+            <div 
+              className="absolute inset-0 bg-gradient-to-b from-white/70 via-cream/30 to-transparent opacity-0 animate-fade-in group-hover:opacity-100 transition-opacity duration-700"
+              style={{ animationDelay: "0.5s" }}
+            />
+            {/* Glowing border effect */}
+            <div 
+              className="absolute -inset-0.5 bg-gradient-to-r from-gold/40 via-gold/20 to-gold/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10 blur-sm"
+            />
+          </div>
         </div>
-        
+
         <InvitationHeader
           title="House Ceremony Invitation"
           subtitle="With great joy and divine blessings, we invite you to grace the auspicious occasion of our housewarming ceremony."
