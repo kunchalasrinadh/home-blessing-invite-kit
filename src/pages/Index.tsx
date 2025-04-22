@@ -19,19 +19,19 @@ const Index = () => {
 
   const eventSchedule = [
     {
-      time: "May 9, 10:23 PM",
+      time: "Friday, May 9, 10:23 PM",
       activity: "Gruha Pravesam (House Warming Ceremony)",
     },
     {
-      time: "May 10, 6:00 AM",
+      time: "Saturday, May 10, 6:00 AM",
       activity: "Suprabhatham, Abhishekam & Pooja",
     },
     {
-      time: "May 10, 8:00 AM",
+      time: "Saturday, May 10, 8:00 AM",
       activity: "Sathya Narayana Vratham",
     },
     {
-      time: "May 10, 12:00 PM",
+      time: "Saturday, May 10, 12:00 PM",
       activity: "Lunch Prasadam",
     },
   ];
