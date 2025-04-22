@@ -132,7 +132,17 @@ export default {
 					'50%': {
 						backgroundPosition: '100% 50%'
 					}
-				}
+				},
+        "zoom-in": {
+          "0%": {
+            opacity: "0",
+            transform: "scale(1.1) translateY(10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1) translateY(0)",
+          },
+        },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -140,7 +150,8 @@ export default {
 				'fade-in': 'fade-in 0.8s ease-out',
 				'slide-in': 'slide-in 1s ease-out',
 				'pulse-gold': 'pulse-gold 2s infinite',
-				'border-dance': 'border-dance 4s ease infinite'
+				'border-dance': 'border-dance 4s ease infinite',
+        "zoom-in": "zoom-in 1.2s ease-out",
 			}
 		}
 	},

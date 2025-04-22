@@ -74,9 +74,11 @@ const Index = () => {
             <img
               src="/lovable-uploads/3e733e9d-7b16-4bd6-bca5-9cc50843fe03.png"
               alt="Home Front"
-              className="w-full h-64 md:h-80 object-cover shadow-lg border-4 border-gold/30 animate-fade-in transform hover:scale-[1.02] transition-all duration-1000 group-hover:-translate-y-1 group-hover:rotate-1 group-hover:scale-[1.03]"
+              className="w-full h-[500px] md:h-[600px] object-cover shadow-lg border-4 border-gold/30 
+                animate-[zoom-in_1.2s_ease-out] grayscale hover:grayscale-0 
+                transition-all duration-1000"
               style={{ 
-                objectPosition: "center",
+                objectPosition: "center 30%",
                 animationDelay: "0.3s",
                 boxShadow: "0 0 20px rgba(212, 175, 55, 0.3)",
               }}
