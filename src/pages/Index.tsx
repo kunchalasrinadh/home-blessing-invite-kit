@@ -9,12 +9,12 @@ import { Gallery } from "@/components/ui/gallery";
 
 const Index = () => {
   // Event schedule details
-  const eventDate = "Thursday, May 9, 2024 • Gruha Pravesam at 10:23 PM";
+  const eventDate = "Friday, May 9, 2025 • Gruha Pravesam at 10:23 PM";
   const fullAddress = "D No 494-B1-A, Near Gangamma Thalli Temple, Narasaraopet, Palnadu, AP";
   const googleMapUrl = "https://www.google.com/maps/dir/?api=1&destination=722R%2BQRF%2C+Guntur%2C+Andhra+Pradesh+522601";
   
   // Set target date string in ISO format with correct timezone (GMT+5:30 for India)
-  // May 9th, 2024 at 10:23 PM IST
+  // May 9th, 2025 at 10:23 PM IST
   const targetDate = "2025-05-09T22:23:00+05:30";
 
   const eventSchedule = [
