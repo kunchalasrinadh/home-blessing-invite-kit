@@ -21,7 +21,7 @@ export function HostedBy() {
             <div className="relative group">
               <div className="w-56 h-56 mx-auto overflow-hidden rounded-full border-4 border-gold/30 shadow-xl transition-transform duration-500 hover:scale-105">
                 <img
-                  src="/lovable-uploads/3b72f811-9cb4-4ff4-b34a-8374173e750f.png"
+                  src="/images/3b72f811-9cb4-4ff4-b34a-8374173e750f.png"
                   alt="Kunchala Venkateswarlu"
                   className="w-full h-full object-cover object-top transform transition-all duration-500"
                 />
@@ -30,7 +30,6 @@ export function HostedBy() {
             </div>
             <div className="space-y-2">
               <h3 className="font-dancing text-3xl text-gold">Kunchala Venkateswarlu</h3>
-              <p className="text-warmGray/80 font-medium">Proud Father</p>
             </div>
           </div>
           
@@ -38,7 +37,7 @@ export function HostedBy() {
             <div className="relative group">
               <div className="w-56 h-56 mx-auto overflow-hidden rounded-full border-4 border-gold/30 shadow-xl transition-transform duration-500 hover:scale-105">
                 <img
-                  src="/lovable-uploads/294e957e-f32e-46f9-aaed-2dee8eb25d85.png"
+                  src="/images/294e957e-f32e-46f9-aaed-2dee8eb25d85.png"
                   alt="Kunchala Padmavathi"
                   className="w-full h-full object-cover object-top transform transition-all duration-500"
                 />
@@ -47,7 +46,6 @@ export function HostedBy() {
             </div>
             <div className="space-y-2">
               <h3 className="font-dancing text-3xl text-gold">Kunchala Padmavathi</h3>
-              <p className="text-warmGray/80 font-medium">Proud Mother</p>
             </div>
           </div>
         </div>
