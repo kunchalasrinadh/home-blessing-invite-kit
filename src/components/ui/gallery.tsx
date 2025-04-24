@@ -42,13 +42,11 @@ export function Gallery() {
           </div>
         </div>
         
-        {/* Traditional decorative element */}
-        <div className="flex justify-center mt-10">
-          <div className="relative w-24 h-8">
-            <div className="absolute left-0 w-8 h-8 rounded-full border-2 border-gold/40"></div>
-            <div className="absolute left-8 w-8 h-8 rounded-full border-2 border-gold/40"></div>
-            <div className="absolute left-16 w-8 h-8 rounded-full border-2 border-gold/40"></div>
-          </div>
+        {/* Repeating Diamond Decorative Divider */}
+        <div className="flex justify-center mt-12 space-x-2">
+          {[...Array(7)].map((_, i) => (
+            <div key={i} className="w-4 h-4 transform rotate-45 border-2 border-yellow-500 bg-white"></div>
+          ))}
         </div>
       </div>
     </div>
