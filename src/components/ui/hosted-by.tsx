@@ -50,13 +50,13 @@ export function HostedBy() {
           </div>
         </div>
 
-        {/* Traditional decorative element */}
+        {/* Decorative Mandala Divider */}
         <div className="flex justify-center mt-12">
-          <div className="relative w-24 h-8">
-            <div className="absolute left-0 w-8 h-8 rounded-full border-2 border-gold/40"></div>
-            <div className="absolute left-8 w-8 h-8 rounded-full border-2 border-gold/40"></div>
-            <div className="absolute left-16 w-8 h-8 rounded-full border-2 border-gold/40"></div>
-          </div>
+          <svg width="100" height="20" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10H100" stroke="#D4AF37" strokeWidth="2"/>
+            <circle cx="50" cy="10" r="6" stroke="#D4AF37" strokeWidth="2" fill="white" />
+            <circle cx="50" cy="10" r="2" fill="#D4AF37"/>
+          </svg>
         </div>
       </div>
     </div>
