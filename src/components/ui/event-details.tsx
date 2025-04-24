@@ -35,15 +35,15 @@ export function EventDetails({ address, events }: EventDetailsProps) {
             {events.map((event, index) => (
               <div 
                 key={index} 
-                className="timeline-item animate-fade-in bg-white/95 rounded-lg p-4" 
+                className="timeline-item animate-fade-in bg-white/95 rounded-lg p-4 border-l-4 border-gold shadow-md hover:shadow-lg transition-all duration-300" 
                 style={{ animationDelay: `${0.3 + (index * 0.1)}s` }}
               >
-                <div className="timeline-dot"></div>
+                <div className="timeline-dot bg-gold"></div>
                 <div className="flex items-center mb-2">
-                  <Clock className="w-4 h-4 text-gold mr-2" />
-                  <span className="font-medium">{event.time}</span>
+                  <Clock className="w-5 h-5 text-gold mr-2" />
+                  <span className="font-medium text-gold">{event.time}</span>
                 </div>
-                <p className="font-playfair text-lg">{event.activity}</p>
+                <p className="font-playfair text-lg ml-7">{event.activity}</p>
               </div>
             ))}
           </div>
