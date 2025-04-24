@@ -20,7 +20,7 @@ export function Gallery() {
           <div className="group relative overflow-hidden rounded-lg border-2 border-gold/30 animate-fade-in transform transition-all duration-500 hover:scale-105">
             <div className="absolute inset-0 bg-gradient-to-t from-gold/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <img
-              src="/lovable-uploads/3e733e9d-7b16-4bd6-bca5-9cc50843fe03.png"
+              src="/images/3e733e9d-7b16-4bd6-bca5-9cc50843fe03.png"
               alt="House Front"
               className="w-full h-72 object-cover"
             />
@@ -32,7 +32,7 @@ export function Gallery() {
           <div className="group relative overflow-hidden rounded-lg border-2 border-gold/30 animate-fade-in transition-all duration-500 hover:scale-105" style={{ animationDelay: "0.2s" }}>
             <div className="absolute inset-0 bg-gradient-to-t from-gold/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <img
-              src="/lovable-uploads/bdd48dfd-0955-4dc2-88f7-0af419c6273c.png"
+              src="/images/bdd48dfd-0955-4dc2-88f7-0af419c6273c.png"
               alt="Community Night"
               className="w-full h-72 object-cover"
             />
