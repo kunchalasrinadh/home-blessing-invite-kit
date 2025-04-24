@@ -42,11 +42,13 @@ export function Gallery() {
           </div>
         </div>
         
-        {/* Repeating Diamond Decorative Divider */}
-        <div className="flex justify-center mt-12 space-x-2">
-          {[...Array(7)].map((_, i) => (
-            <div key={i} className="w-4 h-4 transform rotate-45 border-2 border-yellow-500 bg-white"></div>
-          ))}
+        {/* Golden Floral Dots Divider */}
+        <div className="flex justify-center mt-12 space-x-3">
+          <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+          <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+          <div className="w-4 h-4 bg-yellow-600 rounded-full"></div>
+          <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+          <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
         </div>
       </div>
     </div>
