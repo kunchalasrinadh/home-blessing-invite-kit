@@ -5,6 +5,7 @@ import { LocationMap } from "@/components/ui/location-map";
 import { Countdown } from "@/components/ui/countdown";
 import { Footer } from "@/components/ui/footer";
 import { Gallery } from "@/components/ui/gallery";
+import { HostedBy } from "@/components/ui/hosted-by";
 
 const Index = () => {
   // Event schedule details
@@ -100,10 +101,11 @@ const Index = () => {
         <Gallery />
 
         <EventDetails address={fullAddress} events={eventSchedule} />
+        
+        <HostedBy />
 
         <LocationMap address={fullAddress} googleMapUrl={googleMapUrl} />
 
-        {/* Footer will include WhatsApp and contact */}
         <Footer />
         
         {/* Decorative traditional elements at bottom */}
