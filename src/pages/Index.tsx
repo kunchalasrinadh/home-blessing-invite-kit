@@ -94,18 +94,64 @@ const Index = () => {
           subtitle="With great joy and divine blessings, we invite you to grace the auspicious occasion of our housewarming ceremony."
           date={eventDate}
         />
-        
+      
         <Countdown targetDate={targetDate} />
 
         <Gallery />
 
-        <EventDetails address={fullAddress} events={eventSchedule} />
+        {/* Our New Home */}
+        <div className="relative overflow-hidden">
+          <div className="group relative">
+            <img
+              src="/lovable-uploads/3e733e9d-7b16-4bd6-bca5-9cc50843fe03.png"
+              alt="Home Front"
+              className="w-full h-[500px] md:h-[600px] object-cover shadow-lg border-4 border-gold/30 
+                animate-slide-in-up transition-all duration-1000"
+              style={{ 
+                objectPosition: "center 15%",
+                animationDelay: "0.3s",
+                boxShadow: "0 0 20px rgba(212, 175, 55, 0.3)",
+              }}
+            />
+            {/* Glowing border effect */}
+            <div 
+              className="absolute -inset-0.5 bg-gradient-to-r from-gold/40 via-gold/20 to-gold/40 -z-10 blur-sm"
+            />
+          </div>
+        </div>
+
+        {/* Hosts Section */}
+        <div className="bg-white py-16 px-6 md:px-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-playfair text-4xl font-bold mb-10 gold-gradient">
+              Hosted By
+            </h2>
+            <div className="space-y-4">
+              <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                <h3 className="text-2xl font-playfair text-gold mb-2">Kunchala Venkateswarlu</h3>
+                <h3 className="text-2xl font-playfair text-gold">&</h3>
+                <h3 className="text-2xl font-playfair text-gold mt-2">Kunchala Padmavathi</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Event Details with Background Image */}
+        <div className="relative">
+          <div className="absolute inset-0 w-1/2 right-0">
+            <img
+              src="/lovable-uploads/3211a934-e2ef-499a-a08e-c7d2ad9dc00f.png"
+              alt="Traditional Ceremony"
+              className="w-full h-full object-cover opacity-20"
+            />
+          </div>
+          <EventDetails address={fullAddress} events={eventSchedule} />
+        </div>
 
         <LocationMap address={fullAddress} googleMapUrl={googleMapUrl} />
 
-        {/* Footer will include WhatsApp and contact */}
         <Footer />
-        
+      
         {/* Decorative traditional elements at bottom */}
         <div className="relative flex justify-center overflow-hidden h-16 bg-gradient-to-r from-gold/20 via-cream to-gold/20">
           <div className="absolute bottom-0 left-0 w-full h-4 bg-gold/10"></div>
