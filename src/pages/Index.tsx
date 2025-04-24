@@ -75,22 +75,16 @@ const Index = () => {
               src="/lovable-uploads/3e733e9d-7b16-4bd6-bca5-9cc50843fe03.png"
               alt="Home Front"
               className="w-full h-[500px] md:h-[600px] object-cover shadow-lg border-4 border-gold/30 
-                animate-[zoom-in_1.2s_ease-out] grayscale hover:grayscale-0 
-                transition-all duration-1000"
+                animate-slide-in-up transition-all duration-1000"
               style={{ 
-                objectPosition: "center 30%",
+                objectPosition: "center 15%",
                 animationDelay: "0.3s",
                 boxShadow: "0 0 20px rgba(212, 175, 55, 0.3)",
               }}
             />
-            {/* Gradient overlay with animation */}
-            <div 
-              className="absolute inset-0 bg-gradient-to-b from-white/70 via-cream/30 to-transparent opacity-0 animate-fade-in group-hover:opacity-100 transition-opacity duration-700"
-              style={{ animationDelay: "0.5s" }}
-            />
             {/* Glowing border effect */}
             <div 
-              className="absolute -inset-0.5 bg-gradient-to-r from-gold/40 via-gold/20 to-gold/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10 blur-sm"
+              className="absolute -inset-0.5 bg-gradient-to-r from-gold/40 via-gold/20 to-gold/40 -z-10 blur-sm"
             />
           </div>
         </div>

@@ -143,6 +143,16 @@ export default {
             transform: "scale(1) translateY(0)",
           },
         },
+        "slide-in-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(100%)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -152,6 +162,7 @@ export default {
 				'pulse-gold': 'pulse-gold 2s infinite',
 				'border-dance': 'border-dance 4s ease infinite',
         "zoom-in": "zoom-in 1.2s ease-out",
+        "slide-in-up": "slide-in-up 1.2s ease-out",
 			}
 		}
 	},
