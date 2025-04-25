@@ -68,10 +68,10 @@ export function HostedBy() {
 
         {/* Decorative Mandala Divider */}
         <div className="flex justify-center mt-12">
-          <svg width="100" height="20" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="200" height="20" viewBox="0 0 200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 10H100" stroke="#D4AF37" strokeWidth="2"/>
-            <circle cx="50" cy="10" r="6" stroke="#D4AF37" strokeWidth="2" fill="white" />
-            <circle cx="50" cy="10" r="2" fill="#D4AF37"/>
+            <circle cx="100" cy="10" r="6" stroke="#D4AF37" strokeWidth="2" fill="white" />
+            <circle cx="100" cy="10" r="2" fill="#D4AF37"/>
           </svg>
         </div>
       </div>
