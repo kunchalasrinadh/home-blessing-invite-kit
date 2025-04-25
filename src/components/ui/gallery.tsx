@@ -42,9 +42,15 @@ export function Gallery() {
           </div>
         </div>
         
-        {/* Embroidered Divider */}
-        <div className="flex justify-center mt-12">
-          <div className="w-full max-w-sm h-1 bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-400 rounded-full shadow-md"></div>
+        {/* Lotus Icon Row */}
+        <div className="flex justify-center gap-4 mt-12">
+          {[...Array(5)].map((_, i) => (
+            <div key={i} className="text-yellow-600 hover:text-yellow-400 transition-transform transform hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C12 2 9 6 12 10C15 6 12 2 12 2ZM5 8C5 8 6 13 12 13C18 13 19 8 19 8C19 8 15 11 12 11C9 11 5 8 5 8ZM4 14C4 14 7 20 12 20C17 20 20 14 20 14C20 14 17 16 12 16C7 16 4 14 4 14Z"/>
+              </svg>
+            </div>
+          ))}
         </div>
       </div>
     </div>
