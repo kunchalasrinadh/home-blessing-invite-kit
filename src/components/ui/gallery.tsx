@@ -1,7 +1,17 @@
 
-import React from "react";
+import React, { useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export function Gallery() {
+  const isMobile = useIsMobile();
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const handleImageClick = (index: number) => {
+    if (isMobile) {
+      setActiveIndex(activeIndex === index ? null : index);
+    }
+  };
+
   return (
     <div className="py-12 px-6 md:py-16 md:px-12 bg-gradient-to-b from-gold/10 via-cream/40 to-white">
       <div className="max-w-4xl mx-auto">
@@ -17,26 +27,33 @@ export function Gallery() {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="group relative overflow-hidden rounded-lg border-2 border-gold/30 animate-fade-in transform transition-all duration-500 hover:scale-105">
-            <div className="absolute inset-0 bg-gradient-to-t from-gold/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div 
+            className={`group relative overflow-hidden rounded-lg border-2 border-gold/30 animate-fade-in transform transition-all duration-500 hover:scale-105 ${activeIndex === 0 ? 'ring-2 ring-gold' : ''}`}
+            onClick={() => handleImageClick(0)}
+          >
+            <div className={`absolute inset-0 bg-gradient-to-t from-gold/30 to-transparent transition-opacity ${isMobile && activeIndex === 0 ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}></div>
             <img
               src="/images/3e733e9d-7b16-4bd6-bca5-9cc50843fe03.png"
               alt="House Front"
               className="w-full h-72 object-cover"
             />
-            <div className="absolute bottom-0 left-0 right-0 p-4 text-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+            <div className={`absolute bottom-0 left-0 right-0 p-4 text-center transition-all duration-500 ${isMobile && activeIndex === 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0'}`}>
               <p className="text-white font-medium text-shadow">Front View</p>
             </div>
           </div>
           
-          <div className="group relative overflow-hidden rounded-lg border-2 border-gold/30 animate-fade-in transition-all duration-500 hover:scale-105" style={{ animationDelay: "0.2s" }}>
-            <div className="absolute inset-0 bg-gradient-to-t from-gold/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div 
+            className={`group relative overflow-hidden rounded-lg border-2 border-gold/30 animate-fade-in transition-all duration-500 hover:scale-105 ${activeIndex === 1 ? 'ring-2 ring-gold' : ''}`} 
+            style={{ animationDelay: "0.2s" }}
+            onClick={() => handleImageClick(1)}
+          >
+            <div className={`absolute inset-0 bg-gradient-to-t from-gold/30 to-transparent transition-opacity ${isMobile && activeIndex === 1 ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}></div>
             <img
               src="/images/bdd48dfd-0955-4dc2-88f7-0af419c6273c.png"
               alt="Community Night"
               className="w-full h-72 object-cover"
             />
-            <div className="absolute bottom-0 left-0 right-0 p-4 text-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+            <div className={`absolute bottom-0 left-0 right-0 p-4 text-center transition-all duration-500 ${isMobile && activeIndex === 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0'}`}>
               <p className="text-white font-medium text-shadow">Welcome Area</p>
             </div>
           </div>
