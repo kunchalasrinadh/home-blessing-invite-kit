@@ -42,13 +42,9 @@ export function Gallery() {
           </div>
         </div>
         
-        {/* Golden Floral Dots Divider */}
-        <div className="flex justify-center mt-12 space-x-3">
-          <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-          <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-          <div className="w-4 h-4 bg-yellow-600 rounded-full"></div>
-          <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-          <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+        {/* Embroidered Divider */}
+        <div className="flex justify-center mt-12">
+          <div className="w-full max-w-sm h-1 bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-400 rounded-full shadow-md"></div>
         </div>
       </div>
     </div>
