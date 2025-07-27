@@ -9,29 +9,29 @@ import { HostedBy } from "@/components/ui/hosted-by";
 
 const Index = () => {
   // Event schedule details
-  const eventDate = "Friday, May 9, 2025 • Gruha Pravesam at 10:23 PM";
-  const fullAddress = "D No 494-B1-A, Near Gangamma Thalli Temple, Narasaraopet, Palnadu, AP";
+  const eventDate = "Friday, August 8, 2025 • Gruha Pravesam at 11:27 PM";
+  const fullAddress = "D No 494-B1-A, Lake View Homes, Near Gangamma Thalli Temple, Narasaraopet, Palnadu Dst., AP";
   const googleMapUrl = "https://www.google.com/maps/dir/?api=1&destination=722R%2BQRF%2C+Guntur%2C+Andhra+Pradesh+522601";
   
   // Set target date string in ISO format with correct timezone (GMT+5:30 for India)
-  // May 9th, 2025 at 10:23 PM IST
-  const targetDate = "2025-05-09T22:23:00+05:30";
+  // August 8th, 2025 at 11:27 PM IST
+  const targetDate = "2025-08-08T23:27:00+05:30";
 
   const eventSchedule = [
     {
-      time: "Friday, May 9, 10:23 PM",
+      time: "Friday, August 8, 11:27 PM",
       activity: "Gruha Pravesam (House Warming Ceremony)",
     },
     {
-      time: "Saturday, May 10, 6:00 AM",
+      time: "Saturday, August 9, 6:00 AM",
       activity: "Suprabhatham, Abhishekam & Pooja",
     },
     {
-      time: "Saturday, May 10, 8:00 AM",
+      time: "Saturday, August 9, 8:00 AM",
       activity: "Sathya Narayana Vratham",
     },
     {
-      time: "Saturday, May 10, 12:00 PM",
+      time: "Saturday, August 9, 12:00 PM",
       activity: "Lunch Prasadam",
     },
   ];
