@@ -153,6 +153,44 @@ export default {
             transform: "translateY(0)",
           },
         },
+        "firework": {
+          "0%": {
+            transform: "scale(0) translateY(0)",
+            opacity: "1"
+          },
+          "50%": {
+            transform: "scale(1) translateY(-50px)",
+            opacity: "1"
+          },
+          "100%": {
+            transform: "scale(0.5) translateY(-100px)",
+            opacity: "0"
+          }
+        },
+        "sparkle": {
+          "0%, 100%": {
+            transform: "scale(0) rotate(0deg)",
+            opacity: "0"
+          },
+          "50%": {
+            transform: "scale(1) rotate(180deg)",
+            opacity: "1"
+          }
+        },
+        "burst": {
+          "0%": {
+            transform: "scale(0)",
+            opacity: "1"
+          },
+          "50%": {
+            transform: "scale(8)",
+            opacity: "0.5"
+          },
+          "100%": {
+            transform: "scale(12)",
+            opacity: "0"
+          }
+        },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -163,6 +201,9 @@ export default {
 				'border-dance': 'border-dance 4s ease infinite',
         "zoom-in": "zoom-in 1.2s ease-out",
         "slide-in-up": "slide-in-up 1.2s ease-out",
+        "firework": "firework 3s ease-out forwards",
+        "sparkle": "sparkle 4s ease-in-out infinite",
+        "burst": "burst 2s ease-out forwards",
 			}
 		}
 	},

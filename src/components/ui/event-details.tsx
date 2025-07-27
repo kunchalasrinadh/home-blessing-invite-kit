@@ -1,6 +1,7 @@
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Calendar, Clock, MapPin } from "lucide-react";
+import { CelebrationAnimation } from "./celebration-animation";
 
 interface Event {
   time: string;
@@ -13,8 +14,34 @@ interface EventDetailsProps {
 }
 
 export function EventDetails({ address, events }: EventDetailsProps) {
+  const [showCelebration, setShowCelebration] = useState(false);
+  const [hasTriggered, setHasTriggered] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasTriggered) {
+          setShowCelebration(true);
+          setHasTriggered(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasTriggered]);
+
   return (
-    <div className="bg-white py-16 px-6 md:px-12">
+    <div ref={sectionRef} className="bg-white py-16 px-6 md:px-12 relative">
+      <CelebrationAnimation 
+        isActive={showCelebration} 
+        onComplete={() => setShowCelebration(false)} 
+      />
       <div className="max-w-4xl mx-auto">
         <h2 className="font-playfair text-4xl font-bold mb-10 text-center gold-gradient">
           Event Details

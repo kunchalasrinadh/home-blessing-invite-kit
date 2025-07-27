@@ -225,6 +225,48 @@
   }
 }
 
+/* Celebration animations */
+@keyframes firework {
+  0% {
+    transform: scale(0) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1) translateY(-50px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5) translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+@keyframes burst {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(12);
+    opacity: 0;
+  }
+}
+
 /* Responsive adjustments for mobile */
 @media (max-width: 640px) {
   .invite-container {
@@ -238,4 +280,17 @@
   .card-elegant {
     @apply p-4;
   }
+}
+
+/* Animation utilities */
+.animate-firework {
+  animation: firework 3s ease-out forwards;
+}
+
+.animate-sparkle {
+  animation: sparkle 4s ease-in-out infinite;
+}
+
+.animate-burst {
+  animation: burst 2s ease-out forwards;
 }
