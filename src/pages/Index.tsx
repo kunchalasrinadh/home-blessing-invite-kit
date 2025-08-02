@@ -1,6 +1,7 @@
 import React from "react";
 import { InvitationHeader } from "@/components/ui/invitation-header";
 import { EventDetails } from "@/components/ui/event-details";
+import { InvitationVideo } from "@/components/ui/invitation-video";
 import { LocationMap } from "@/components/ui/location-map";
 import { Countdown } from "@/components/ui/countdown";
 import { Footer } from "@/components/ui/footer";
@@ -101,6 +102,8 @@ const Index = () => {
         <Gallery />
 
         <EventDetails address={fullAddress} events={eventSchedule} />
+        
+        <InvitationVideo />
         
         <HostedBy />
 
